@@ -1,0 +1,47 @@
+<article class="headlbox<MTIf name="__odd__"> odd</MTIf>">
+  <div class="entry-sect">
+    <h1><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h1>
+    <ul>
+      <li>
+	<MTIf tag="EntryCategory">
+        <MTEntryCategories glue=" | "><a href="<$MTCategoryArchiveLink$>" title="<MTCategoryLabel> Index"><MTCategoryLabel></a></MTEntryCategories> 
+	</MTIf>
+	<span class="date">(<time datetime="<$MTEntryDate format_name="iso8601"$>"><$MTEntryDate$></time>)</span></li>
+      <li><$MTInclude module="<__trans phrase="Userpic">" userpic_size="36"$>
+        <a href="<$MTGetVar name="profile_view_url"$><$MTEntryAuthorID$>"><$MTEntryAuthorDisplayName encode_html="1"$></a> 
+        <a href="javascript:void(0)" onclick="return mtScore(<$MTEntryID$>)" id="scoring-id-<$MTEntryID$>" class="scoring">
+          <span id="scoring-vote-<$MTEntryID$>" class="scoring-vote"><__trans phrase="Vote"></span>
+          <span id="scoring-score-<$MTEntryID$>" class="scoring-score"><$MTEntryScore namespace="community_pack_recommend" singular="1" plural="#" none="0"$></span>
+          <span id="scoring-score-label-<$MTEntryID$>" class="scoring-score-label"><$MTEntryScore namespace="community_pack_recommend" singular="<__trans phrase="Vote">" plural="<__trans phrase="Vote">" none="<__trans phrase="Vote">"$></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <p class="ccount">
+    <a href="<$MTEntryPermalink$>#comments" title="<__trans phrase="Reply to [_1]" params='<$MTEntryTitle encode_html="1"$>'>" rel="nofollow"><$MTEntryCommentCount$></a>
+  </p>
+
+  <div class="lcomment">
+<MTComments sort_order="descend" lastn="1">
+    <ul>
+      <li>RES <span class="date"><a href="<$MTEntryPermalink$>#comment-<$MTCommentID$>" title="<__trans phrase="Permalink to this Reply">"><time datetime="<$MTCommentDate format_name="iso8601"$>"><$MTCommentDate$></time></a></span></li>
+      <li><$MTInclude module="<__trans phrase="Userpic">" userpic_size="36" userpic_type="commenter"$>
+	<MTIfCommenterIsAuthor>
+        <a href="<$MTGetVar name="profile_view_url"$><$MTCommenterID$>"><$MTCommenterName encode_html="1"$></a>
+	<MTElse>
+        <$MTCommentAuthorLink$>
+	</MTIfCommenterIsAuthor>
+      </li>
+    </ul>
+<MTElse>
+    <p>
+	<MTIfCommentsAccepted>
+      <a href="<$MTEntryPermalink$>#comments" title="<__trans phrase="Reply to [_1]" params='<$MTEntryTitle encode_html="1"$>'>" rel="nofollow"><__trans phrase="Replies"></a>
+	<MTElse>
+      <__trans phrase="Closed">
+	</MTIfCommentsAccepted>
+    </p>
+</MTComments>
+  </div>
+</article>

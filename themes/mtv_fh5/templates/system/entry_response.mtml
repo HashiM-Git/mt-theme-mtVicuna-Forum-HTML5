@@ -1,0 +1,44 @@
+<MTSetVars>
+	tempName=system_topicWrite
+	page_column=single
+	blog_id=<$MTBlogID$>
+	<MTIf name="entry_status" eq="1">
+		page_title=<__trans phrase="Topic Pending">
+		message=<p><__trans phrase="The topic you posted has been received and held for approval by the forum administrators."></p>
+	<MTElse>
+		<MTIf name="entry_status" eq="2">
+			page_title=<__trans phrase="Topic Posted">
+			message=<p><__trans phrase="The topic you posted has been received and published. Thank you for your submission."></p>
+		<MTElse>
+			page_title=<__trans phrase="Topic Pending">
+			message=<p><__trans phrase="The topic you posted has been received and held for approval by the forum administrators."></p>
+		</MTIf>
+	</MTIf>
+</MTSetVars>
+<!DOCTYPE html>
+<html lang="<$MTDefaultLanguage$>">
+  <head>
+    <$MTInclude module="<__trans phrase="HTML Header">"$>
+<MTIfCommentsAccepted>
+    <script src="<$MTLink template="javascript"$>"></script>
+</MTIfCommentsAccepted>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
+  </head>
+  <body class="individual system <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>" onload="mtEntryOnLoad()" onunload="mtEntryOnUnload()">
+    <$MTInclude module="<__trans phrase="Header">"$>
+    <div id="content">
+      <div id="main">
+        <$MTInclude module="<__trans phrase="Topic Path">"$>
+        <h1><$MTGetVar name="page_title"$></h1>
+        <article class="entry">
+<$MTGetVar name="message"$>
+        </article>
+        <$MTInclude module="<__trans phrase="Topic Path">"$>
+      </div>
+      <!-- end div#main -->
+      <p><__trans phrase="Return to the <a href="[_1]">forum's homepage</a>." params="<$MTBlogURL$>"></p>
+    </div>
+    <!-- end div#content -->
+    <$MTInclude module="<__trans phrase="Footer">"$>
+  </body>
+</html>
