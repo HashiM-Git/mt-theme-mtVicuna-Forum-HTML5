@@ -27,7 +27,7 @@
         <div class="entry"><$MTCategoryCount setvar="limit"$>
 <MTIf name="limit">
 	<MTEntries sort_by="modified_on" limit="$limit">
-          <$MTInclude module="<__trans phrase="Headline">"$>
+          <$MTInclude module="<__trans phrase="Headline">" arc="0"$>
 	</MTEntries>
 </MTIf>
 <MTHasNoParentCategory>
@@ -52,7 +52,7 @@
           <$MTInclude module="<__trans phrase="Archive Index Link">"$>
         </div>
 <MTIf name="entry_ids">
-	<MTSetVarBlock name="html_body_footer" append="1"><script type="text/javascript" src="<$MTCGIPath$><$MTCommunityScript$>?__mode=score&amp;blog_id=<$MTBlogID$>&amp;f=scored,count&amp;jsonp=mtScore_cb&amp;id=<$MTGetVar name="entry_ids"$>"></script></MTSetVarBlock>
+	<MTSetVarBlock name="html_body_footer" append="1"><script src="<$MTCGIPath$><$MTCommunityScript$>?__mode=score&amp;blog_id=<$MTBlogID$>&amp;f=scored,count&amp;jsonp=mtScore_cb&amp;id=<$MTGetVar name="entry_ids"$>"></script></MTSetVarBlock>
 </MTIf>
         <$MTInclude module="<__trans phrase="Topic Path">"$>
       </div>

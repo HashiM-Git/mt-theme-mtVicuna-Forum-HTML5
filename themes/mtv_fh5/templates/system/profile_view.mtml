@@ -9,14 +9,14 @@
   <head>
     <MTInclude module="<__trans phrase="HTML Header">">
 <MTIf tag="BlogDescription">
-    <meta name="description" content="<$MTBlogDescription encode_html="1"$>" />
+    <meta name="description" content="<$MTBlogDescription encode_html="1"$>">
 </MTIf>
     <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
-    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Recent Actions from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=actions&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>" />
-    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Recent Entries from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=posts&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>" />
-    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Comments from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>" />
-    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Responses to Comments from <$MTAuthorDisplayName encode_html="1"$>">" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>" />
-    <script type="text/javascript">
+    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Recent Actions from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=actions&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
+    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Recent Entries from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=posts&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
+    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Comments from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
+    <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Responses to Comments from <$MTAuthorDisplayName encode_html="1"$>">" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
+    <script>
 <!--
 function relations(following, followed, u) {
     mtSetUser(u);

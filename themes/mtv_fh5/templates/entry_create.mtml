@@ -17,7 +17,7 @@
     <MTInclude module="<__trans phrase="HTML Header">">
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
     <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
-    <script type="text/javascript">
+    <script>
 <!-- <mt:Ignore>Pull Topic name and label from url</mt:Ignore>
 var url = document.URL;
 var cid;
@@ -40,7 +40,7 @@ if (url) {
         <$MTInclude module="<__trans phrase="Topic Path">"$>
         <h1><$MTGetVar name="page_title"$></h1>
         <div class="entry">
-          <script type="text/javascript">
+          <script>
 <!--
 function entry_create_loggedin() {
     var u = mtGetUser();
@@ -87,7 +87,7 @@ function entry_create_loggedin() {
                   </select>
                   <span id="entry-category_label" style="display:none"></span>
                   <input id="entry-category_id" type="hidden" name="category_id" value="">
-                  <script type="text/javascript">
+                  <script>
                   <!--
             if (cid && cname) {
                 var id = document.getElementById('entry-category_id');
@@ -139,7 +139,7 @@ function entry_create_loggedin() {
           <p id="login_message"></p>
 </MTIfLoggedIn>
 
-          <script type="text/javascript">
+          <script>
 <!--
 mtAttachEvent('usersignin', entry_create_loggedin);
 //-->
