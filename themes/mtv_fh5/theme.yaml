@@ -208,15 +208,18 @@ elements:
           u_recent_comments:
             label: Recent Comments
             filename: widget/u_recent_comments.mtml
-          u_category_archive_list:
+          u_category_list:
             label: Category Archive List
-            filename: widget/u_category_archive_list.mtml
+            filename: widget/u_category_list.mtml
           u_search:
             label: Search
             filename: widget/u_search.mtml
           u_openid:
             label: OpenID
             filename: widget/u_openid.mtml
+          u_pages_list:
+            label: Page Listing
+            filename: widget/u_pages_list.mtml
           u_feed:
             label: Feed
             filename: widget/u_feed.mtml

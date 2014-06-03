@@ -6,10 +6,11 @@
 	<MTSubCatIsFirst>
               <ul class="category"></MTSubCatIsFirst>
 	<MTHasNoParentCategory>
+                <li class="topLevel forum">
 		<MTIf tag="CategoryCount">
-                <li class="topLevel forum"><a href="<$MTCategoryArchiveLink$>" title="<__trans phrase="Categories">:<$MTCategoryLabel$>"><$MTCategoryLabel$></a> <span class="icon-entry"><$MTCategoryCount$></span>
+                  <a href="<$MTCategoryArchiveLink$>" title="<__trans phrase="Categories">:<$MTCategoryLabel$>"><$MTCategoryLabel$></a> <span class="icon-entry"><$MTCategoryCount$></span>
 		<MTElse>
-                <li class="topLevel forum"><$MTCategoryLabel$>
+                  <$MTCategoryLabel$>
 		</MTIf>
 	</MTHasNoParentCategory>
 	<MTHasParentCategory>

@@ -19,10 +19,12 @@
       <div id="main">
         <$MTInclude module="<__trans phrase="Topic Path">"$>
         <h1><$MTGetVar name="page_title"$></h1>
-        <div class="entry">
-          <ul class="info">
-            <li class="date">Last Modified: <$MTPageModifiedDate format="%x %X"$></li>
-          </ul>
+        <article class="entry">
+          <header>
+            <ul class="info">
+              <li class="date">Last Modified: <$MTPageModifiedDate format="%x %X"$></li>
+            </ul>
+          </header>
 <MTIf tag="PageBody">
           <div class="textBody">
 <$MTPageBody$>
@@ -34,8 +36,8 @@
           </div>
 </MTIf>
           <$MTInclude module="<__trans phrase="Comments">"$>
-        </div>
-        <!-- end div.entry -->
+        </article>
+        <!-- end article.entry -->
         <$MTInclude module="<__trans phrase="Topic Path">"$>
       </div>
       <!-- end div#main -->
