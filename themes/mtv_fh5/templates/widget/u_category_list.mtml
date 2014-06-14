@@ -23,7 +23,8 @@
                 <li class="create-entry"><a href="<$MTLink template="<__trans phrase="Create Entry">"$><$MTGetVar name="query_string"$>" title="<__trans phrase="The topic is contributed to [_1]" params="<$MTCategoryLabel$>">"><$MTCategoryLabel$></a>
 		</MTIf>
 	</MTHasParentCategory>
-                <$MTSubCatsRecurse$></li>
+                <$MTSubCatsRecurse$>
+                </li>
 	<MTSubCatIsLast>
               </ul></MTSubCatIsLast>
 </MTTopLevelCategories>

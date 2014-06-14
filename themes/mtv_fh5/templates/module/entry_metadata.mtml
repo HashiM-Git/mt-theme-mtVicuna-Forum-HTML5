@@ -4,7 +4,7 @@
                 <span class="vcard author"><a href="<$MTGetVar name="profile_view_url"$><$MTEntryAuthorID$>"><$MTEntryAuthorDisplayName encode_html="1"$></a></span>
               </li>
 </MTIf>
-              <li class="date"><$MTEntryDate$></li>
+              <li class="date"><time datetime="<$MTEntryDate format_name="iso8601"$>"><$MTEntryDate$></time></li>
 <MTIf tag="EntryCategory">
               <li class="category">
 	<MTEntryCategories glue=" | "><a href="<$MTCategoryArchiveLink$>" title="<__trans phrase="Categories">:<$MTCategoryLabel$>"><$MTCategoryLabel$></a></MTEntryCategories>

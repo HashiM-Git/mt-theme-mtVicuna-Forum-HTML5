@@ -8,15 +8,13 @@
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <script>
-	/* <![CDATA[ */
 	var user = <$MTUserSessionState$>;
 	var is_preview = true;
-	/* ]]> */
     </script>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
 <MTIfCommentsAccepted>    <script src="<$MTLink template="javascript"$>"></script></MTIfCommentsAccepted>
-    <title><$MTGetVar name="page_title"$></title>
+    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
   </head>
   <body class="individual system <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>" onload="mtEntryOnLoad()" onload="mtEntryOnLoad()" onunload="mtEntryOnUnload()">
     <$MTInclude module="<__trans phrase="Header">"$>
