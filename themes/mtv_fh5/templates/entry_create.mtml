@@ -3,7 +3,6 @@
 	page_title=<__trans phrase="Start a Topic">
 	page_column=single
 	title=<$MTBlogName encode_html="1"$>: <__trans phrase="Start a Topic">
-	blog_id=<$MTBlogID$>
 </MTSetVars>
 <MTSetVarTemplate name="entryform">
                 <li id="<$MTGetVar name="id"$>-field">
@@ -11,24 +10,15 @@
                   <$MTGetVar name="field_content"$>
                 </li>
 </MTSetVarTemplate>
+<$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
-    <MTInclude module="<__trans phrase="HTML Header">">
+    <$MTInclude module="<__trans phrase="HTML Header">"$>
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
     <$MTCanonicalLINK$>
     <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
-<MTIf name="GA_trackid">
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '<$MTGetVar name="GA_trackid"$>', '<$MTBlogHost$>');
-  ga('send', 'pageview');
-    </script>
-</MTIf>
+    <$MTInclude module="<__trans phrase="Google Analitics">"$>
     <script>
 <!-- <mt:Ignore>Pull Topic name and label from url</mt:Ignore>
 var url = document.URL;

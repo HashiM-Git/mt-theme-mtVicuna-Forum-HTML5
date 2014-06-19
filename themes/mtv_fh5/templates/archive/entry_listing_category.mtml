@@ -2,8 +2,8 @@
 	tempName=index_archive_category
 	page_column=double
 	page_title=<$MTArchiveTitle$> Archive
-	blog_id=<$MTBlogID$>
 </MTSetVars>
+<$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
@@ -16,17 +16,7 @@
     <link rel="alternate" type="application/atom+xml" title="Topic Feed" href="atom.xml"></MTIf>
     <$MTCanonicalLINK$>
     <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
-<MTIf name="GA_trackid">
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '<$MTGetVar name="GA_trackid"$>', '<$MTBlogHost$>');
-  ga('send', 'pageview');
-    </script>
-</MTIf>
+    <$MTInclude module="<__trans phrase="Google Analitics">"$>
   </head>
   <body class="category <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
     <$MTInclude module="<__trans phrase="Header">"$>

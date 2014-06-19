@@ -4,10 +4,11 @@
 	page_title=<__trans phrase="Profile of <$MTAuthorDisplayName encode_html="1"$>">
 	hide_signout_link=1
 </MTSetVars>
+<$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
-    <MTInclude module="<__trans phrase="HTML Header">">
+    <$MTInclude module="<__trans phrase="HTML Header">"$>
 <MTIf tag="BlogDescription">
     <meta name="description" content="<$MTBlogDescription encode_html="1"$>">
 </MTIf>
@@ -16,17 +17,7 @@
     <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Comments from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
     <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Responses to Comments from <$MTAuthorDisplayName encode_html="1"$>">" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
     <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
-<MTIf name="GA_trackid">
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '<$MTGetVar name="GA_trackid"$>', '<$MTBlogHost$>');
-  ga('send', 'pageview');
-    </script>
-</MTIf>
+    <$MTInclude module="<__trans phrase="Google Analitics">"$>
     <script>
 <!--
 function relations(following, followed, u) {
