@@ -1,5 +1,4 @@
 <MTSetVars>
-	tempName=system_topicWrite
 	page_column=single
 	<MTIf name="entry_status" eq="1">
 		page_title=<__trans phrase="Topic Pending">
@@ -13,6 +12,7 @@
 			message=<p><__trans phrase="The topic you posted has been received and held for approval by the forum administrators."></p>
 		</MTIf>
 	</MTIf>
+	tempName=system_topicWrite
 </MTSetVars>
 <$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>

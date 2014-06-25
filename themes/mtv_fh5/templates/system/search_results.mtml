@@ -1,5 +1,4 @@
 <MTSetVars>
-	tempName=system_search
 	page_column=single
 	page_title=<__trans phrase="Search Results">
 	__counter__=1
@@ -9,6 +8,7 @@
 	<MTElse>
 		search_type=tag
 	</MTIfStraightSearch>
+	tempName=system_search
 </MTSetVars>
 <$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <$MTInclude module="<__trans phrase="HTML Header">"$>
     <link rel="alternate" type="application/atom+xml" title="<$MTBlogName encode_html="1"$>: <__trans phrase="Search Results">" href="<$MTCGIPath$><$MTSearchScript$>?<$MTGetVar name="search_type"$>=<$MTSearchString encode_url="1"$>&amp;Template=feed&amp;IncludeBlogs=<$MTSearchIncludeBlogs$>">
     <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
-    <$MTInclude module="<__trans phrase="Google Analitics">"$>
+    <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="individual system <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
@@ -145,7 +145,6 @@
       </div>
       <!-- end div#main -->
       <$MTInclude module="<__trans phrase="Utilities">"$>
-      <$MTInclude module="<__trans phrase="Return to page top">"$>
     </div>
     <!-- end div#content -->
     <$MTInclude module="<__trans phrase="Footer">"$>

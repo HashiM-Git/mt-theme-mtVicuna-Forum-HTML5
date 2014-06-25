@@ -1,12 +1,15 @@
-
+<MTAuthors lastn="20" need_entry="0" roles="<__trans phrase="Blog Administrator">, <__trans phrase="Contributor">" sort_by="created_on" sort_order="descend">
+	<MTIf name="__first__">
           <section>
             <h1><__trans phrase="Member"></h1>
             <div class="members">
               <ul>
-<MTAuthors lastn="20" need_entry="0" roles="<__trans phrase="Blog Administrator">, <__trans phrase="Contributor">" sort_by="created_on" sort_order="descend">
+	</MTIf>
                 <li><$MTInclude module="<__trans phrase="Userpic">" userpic_type="userlist" userpic_size="30"$></li>
-</MTAuthors>
+	<MTIf name="__last__">
               </ul>
               <p class="menu-members"><a href="<$MTLink template="<__trans phrase="Member List">"$>"><__trans phrase="Member List"></a></p>
             </div>
           </section>
+	</MTIf>
+</MTAuthors>

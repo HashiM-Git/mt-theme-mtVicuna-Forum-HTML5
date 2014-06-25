@@ -1,7 +1,7 @@
 <MTSetVars>
-	tempName=individual_entry
 	page_column=single
 	page_title=<$MTEntryTitle$>
+	tempName=individual_entry
 </MTSetVars>
 <$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <MTEntryNext>    <link rel="next bookmark" href="<$MTEntryPermalink$>" title="<$MTEntryTitle encode_html="1"$>"></MTEntryNext>
     <link rel="canonical" href="<$MTEntryPermalink$>">
     <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
-    <$MTInclude module="<__trans phrase="Google Analitics">"$>
+    <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="individual single" id="entry<$MTEntryID pad="1"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
@@ -36,7 +36,6 @@
       </div>
       <!-- end div#main -->
       <$MTInclude module="<__trans phrase="Utilities">"$>
-      <$MTInclude module="<__trans phrase="Return to page top">"$>
     </div>
     <!-- end div#content -->
     <$MTInclude module="<__trans phrase="Footer">"$>

@@ -1,7 +1,7 @@
 <MTSetVars>
-	tempName=index_archive_category
 	page_column=double
 	page_title=<$MTArchiveTitle$> Archive
+	tempName=index_archive_category
 </MTSetVars>
 <$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
     <link rel="alternate" type="application/atom+xml" title="Topic Feed" href="atom.xml"></MTIf>
     <$MTCanonicalLINK$>
     <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
-    <$MTInclude module="<__trans phrase="Google Analitics">"$>
+    <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="category <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
@@ -60,7 +60,6 @@
       </div>
       <!-- end div#main -->
       <$MTInclude module="<__trans phrase="Utilities">"$>
-      <$MTInclude module="<__trans phrase="Return to page top">"$>
     </div>
     <!-- end div#content -->
     <$MTInclude module="<__trans phrase="Footer">"$>
