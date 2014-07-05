@@ -9,14 +9,14 @@
                   <label id="<$MTGetVar name="id"$>-label" for="<$MTGetVar name="id"$>"><$MTGetVar name="label"$><MTIf name="required"> *</MTIf></label>
                   <$MTGetVar name="field_content"$>
                 </li>
-</MTSetVarTemplate>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVarTemplate><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
+    <link rel="canonical" href="<$MTLink template="<__trans phrase="Create Entry"$>">
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
-    <$MTCanonicalLINK$>
+    <$MTCanonicalLINK regex_replace="/¥s¥/>/",">"$>
     <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
     <script><mt:Ignore>Pull Topic name and label from url</mt:Ignore>
@@ -33,7 +33,7 @@ if (url) {
 }
     </script>
   </head>
-  <body class="individual <$MTGetVar name="page_column"$>">
+  <body class="individual <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
     <div id="content">
       <div id="main">

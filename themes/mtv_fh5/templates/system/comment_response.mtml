@@ -11,13 +11,12 @@
 		message=<p><__trans phrase="Your comment submission failed for the following reasons."></p><p><$MTErrorMessage encode_html="1"$></p>
 	</MTIf>
 	tempName=system_comment_response
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
   </head>
   <body class="mainIndex <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
@@ -32,7 +31,7 @@
           </ul>
           <div class="textBody">
             <$MTGetVar name="message"$>
-            <p><a href="<MTEntryLink>">Back</a></p>
+            <p><a href="<$MTEntryLink$>">Back</a></p>
           </div>
         </div>
         <$MTInclude module="<__trans phrase="Topic Path">"$>

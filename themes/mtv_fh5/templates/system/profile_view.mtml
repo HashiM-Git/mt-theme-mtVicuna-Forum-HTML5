@@ -3,8 +3,7 @@
 	page_title=<__trans phrase="Profile of <$MTAuthorDisplayName encode_html="1"$>">
 	hide_signout_link=1
 	tempName=member_profile
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
@@ -16,7 +15,7 @@
     <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Recent Entries from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=posts&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
     <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Comments from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'>" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
     <link type="application/atom+xml" rel="alternate" title="<__trans phrase="Responses to Comments from <$MTAuthorDisplayName encode_html="1"$>">" href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>">
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
     <script>
 function relations(following, followed, u) {
@@ -75,7 +74,7 @@ function relations(following, followed, u) {
             <li><strong><$MTGetVar name="name" escape="html"$></strong> : <$MTGetVar name="field_value" sanitize="1"$></li></MTIf>
 	</MTIf>
 </MTLoop>
-            <li><img src="<$MTStaticWebPath$>images/status_icons/feed.gif" alt="<__trans phrase="Subscribe to feed">" /> <a href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>"><__trans phrase="Recent Actions from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'></a></li>
+            <li><img src="<$MTStaticWebPath$>images/status_icons/feed.gif" alt="<__trans phrase="Subscribe to feed">"> <a href="<$MTCGIPath$><$MTCommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$MTBlogID$>&amp;id=<$MTAuthorID$>"><__trans phrase="Recent Actions from [_1]" params='<$MTAuthorDisplayName encode_html="1"$>'></a></li>
           </ul>
           <section id="profile-recent-actions" class="section tab_content">
             <h1 class="tab_content_label"><__trans phrase="Recent Actions"></h1>

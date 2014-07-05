@@ -2,20 +2,19 @@
 	page_column=double
 	page_title=<$MTArchiveTitle$> Archive
 	tempName=index_archive_category
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
+    <link rel="canonical" href="<$MTArchiveLink$>">
 <MTIf name="datebased_archive">
 <MTArchivePrevious>    <link rel="prev bookmark" href="<$MTArchiveLink$>" title="<$MTArchiveTitle encode_html="1"$>"></MTArchivePrevious>
 <MTArchiveNext>    <link rel="next bookmark" href="<$MTArchiveLink$>" title="<$MTArchiveTitle encode_html="1"$>"></MTArchiveNext>
 <MTElse name="category_archive">
     <link rel="alternate" type="application/atom+xml" title="Topic Feed" href="atom.xml"></MTIf>
-    <$MTCanonicalLINK$>
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="category <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">

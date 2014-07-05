@@ -13,8 +13,7 @@
 		</MTIf>
 	</MTIf>
 	tempName=system_topicWrite
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
@@ -22,7 +21,7 @@
 <MTIfCommentsAccepted>
     <script src="<$MTLink template="javascript"$>"></script>
 </MTIfCommentsAccepted>
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
   </head>
   <body class="individual system <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>" onload="mtEntryOnLoad()" onunload="mtEntryOnUnload()">
     <$MTInclude module="<__trans phrase="Header">"$>

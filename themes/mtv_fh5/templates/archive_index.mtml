@@ -2,15 +2,14 @@
 	tempName=index_archive
 	page_column=single
 	page_title=Archive Index
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
+    <link rel="canonical" href="<$MTLink template="<__trans phrase="Archive Index">"$>">
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
-    <$MTCanonicalLINK$>
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTBlogName encode_html="1"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="archives <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">

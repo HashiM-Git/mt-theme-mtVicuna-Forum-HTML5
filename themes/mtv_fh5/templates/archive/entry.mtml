@@ -2,20 +2,19 @@
 	page_column=single
 	page_title=<$MTEntryTitle$>
 	tempName=individual_entry
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
 <MTIf tag="BlogDescription">    <meta name="description" content="<$MTBlogDescription encode_html="1"$>"></MTIf>
+    <link rel="canonical" href="<$MTEntryPermalink$>">
 <MTEntryPrevious>    <link rel="prev bookmark" href="<$MTEntryPermalink$>" title="<$MTEntryTitle encode_html="1"$>"></MTEntryPrevious>
 <MTEntryNext>    <link rel="next bookmark" href="<$MTEntryPermalink$>" title="<$MTEntryTitle encode_html="1"$>"></MTEntryNext>
-    <link rel="canonical" href="<$MTEntryPermalink$>">
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
-  <body class="individual single" id="entry<$MTEntryID pad="1"$>">
+  <body class="individual <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>" id="entry<$MTEntryID pad="1"$>">
     <$MTInclude module="<__trans phrase="Header">"$>
     <div id="content">
       <div id="main">

@@ -3,16 +3,15 @@
 	page_title=<$MTPageTitle remove_html="1"$>
 	current_page=<$MTPageID$>
 	tempName=individual_webpage
-</MTSetVars>
-<$MTInclude module="<__trans phrase="All Setting">"$>
+</MTSetVars><$MTInclude module="<__trans phrase="All Setting">"$>
 <!DOCTYPE html>
 <html lang="<$MTDefaultLanguage$>">
   <head>
     <$MTInclude module="<__trans phrase="HTML Header">"$>
     <meta name="description" content="<$MTPageExcerpt remove_html="1" ltrim="1"$>">
-<MTIf tag="PageKeywords">    <meta name="keywords" content="<$MTPageKeywords remove_html="1"$>" /></MTIf>
-    <$MTCanonicalLINK$>
-    <title><$MTGetVar name="page_title"$> - <$MTGetVar name="blog_name"$></title>
+<MTIf tag="PageKeywords">    <meta name="keywords" content="<$MTPageKeywords remove_html="1"$>"></MTIf>
+    <link rel="canonical" href="<$MTPagePermalink$>">
+    <title><$MTGetVar name="blog_name"$> - <$MTGetVar name="page_title"$></title>
     <$MTInclude module="<__trans phrase="Google Analytics">"$>
   </head>
   <body class="webPage <$MTGetVar name="page_column"$><$MTGetVar name="eyecatch"$>">
