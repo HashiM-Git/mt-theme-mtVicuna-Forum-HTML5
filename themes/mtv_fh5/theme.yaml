@@ -88,7 +88,7 @@ elements:
             mappings:
               entry_archive:
                 archive_type: Individual
-                file_template: %-c/%e%x
+                file_template: '%-c/%e%x'
         archive:
           entry_listing_category:
             label: Entry Listing Category
@@ -97,7 +97,7 @@ elements:
               category:
                 archive_type: Category
                 preferred: 1
-                file_template: %-c/%i
+                file_template: '%-c/%i'
           entry_feed:
             label: Entry Feed
             filename: archive/entry_feed.mtml
@@ -105,7 +105,7 @@ elements:
               category:
                 archive_type: Category
                 preferred: 0
-                file_template: %-c/atom.xml
+                file_template: '%-c/atom.xml'
         page:
           page:
             label: Page
@@ -113,7 +113,7 @@ elements:
             mappings:
               page_archive:
                 archive_type: Page
-                file_template: %-c/%-f
+                file_template: '%-c/%-f'
         module:
           all_setting:
             label: All Setting
