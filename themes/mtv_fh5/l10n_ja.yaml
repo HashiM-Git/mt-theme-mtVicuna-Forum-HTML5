@@ -37,7 +37,7 @@ Recent Comments: 最近届いたコメント
 Feed: フィード購読リンク
 GlobalJavaScript: GlobalJavaScript
 A picture can be uploaded as an item and an original eye catch picture can be used by attaching and reconstructing the tag "@eyech.": 画像をアイテムとしてアップロードし、タグ「@eyech」をつけて再構築することで、オリジナルのアイキャッチ画像を使うことができます。
-The web page that adheres the @globalNavi tag is automatically added to the item.: @globalNavi タグの付いたウェブページを自動的に項目に追加します。
+The web page that adheres the @globalNavi tag is automatically added to the item.: '@globalNavi タグの付いたウェブページを自動的に項目に追加します。'
 You can use some <abbr title="Hyper Text Markup Language">HTML</abbr> tags for decorating.: スタイル指定用の一部の <abbr title="Hyper Text Markup Language">HTML</abbr>タグが使用できます。
 You cannot use <abbr title="Hyper Text Markup Language">HTML</abbr> tags.: <abbr title="Hyper Text Markup Language">HTML</abbr>タグは使用できません。
 Extended: 続きを読む
