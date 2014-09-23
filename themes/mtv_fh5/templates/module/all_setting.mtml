@@ -1,6 +1,8 @@
 <MTSetVars>
 	jquery=1
 	eyech=0
+	GLNavi=1
+	Others=0
 	GA_trackid=0
 </MTSetVars>
 <MTIgnore>  Do not remove this block.
@@ -14,6 +16,15 @@
 	3: eye-c  (Content)
 	4: eye-m  (Main)
 	5: eye-u  (Utilities on the top - future/Bazooka double only)
+  $GLNavi is GlobalNavigation Setting
+	0: No Use
+	1: Use(default)
+	2: Navigation On Top
+  $Others is Option body class Settings(set1,set2,al,f800‾f1000,etc...).
+  It can use to put in original class setting. " "(space) of delimiter
+	0: No Use
+	String Sample: 'set2 f1000 al only'
+	 ...Details on http://kita2.net/stylelib/sub/layouts.php
   $Ga_trackid is Google Analitics TrackID set
 	0: none
 	String("UA-XXXXXXXX-X"): Analitics analyze Start
@@ -35,5 +46,19 @@
 	<MTElseIf eq="5">eyecatch= eye-u
 	</MTIf>
 	blog_id=<$MTBlogID$>
-</MTSetVars>
-<MTSetVarBlock name="profile_view_url"><$MTCGIPath$><$MTCommunityScript$>?__mode=view&amp;blog_id=<$MTBlogID$>&amp;id=</MTSetVarBlock>
+</MTSetVars><MTIf name="Others">
+	<MTIf name="eyech" ne="3">
+	<$MTGetVar name="Others" regex_replace="/set1|set2/g","" setvar="Others"$>
+	<MTElse><MTIf name="page_column" ne="multi">
+	<$MTGetVar name="Others" regex_replace="/set1/g","" setvar="Others"$>
+		</MTIf><MTIf name="page_column" ne="multi2">
+	<$MTGetVar name="Others" regex_replace="/set2/g","" setvar="Others"$>
+		</MTIf>
+	</MTIf>
+	<$MTGetVar name="Others" regex_replace="/  /g"," " setvar="Others"$>
+	<$MTGetVar name="Others" regex_replace="/^ /","" setvar="Others"$>
+	<MTIf name="Others">
+	<MTSetVarBlock name="page_column" append="1"$> <$MTGetVar name="Others"$></MTSetVarBlock></MTIf>
+</MTIf><MTIf name="GLNavi" eq="2">
+	<$MTSetVar name="page_column" value=" gt" append="1"$>
+</MTIf><MTSetVarBlock name="profile_view_url"><$MTCGIPath$><$MTCommunityScript$>?__mode=view&amp;blog_id=<$MTBlogID$>&amp;id=</MTSetVarBlock>
